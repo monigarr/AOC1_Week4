@@ -16,8 +16,6 @@
 		515A4F2415D6F4680011E550 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 515A4F2315D6F4680011E550 /* ViewController.m */; };
 		515A4F2715D6F4680011E550 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 515A4F2515D6F4680011E550 /* ViewController_iPhone.xib */; };
 		515A4F2A15D6F4690011E550 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 515A4F2815D6F4690011E550 /* ViewController_iPad.xib */; };
-		515A4F3115D8350F0011E550 /* howling_sideview.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 515A4F3015D8350F0011E550 /* howling_sideview.jpg */; };
-		515A4F3315D835170011E550 /* stalking.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 515A4F3215D835170011E550 /* stalking.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +33,6 @@
 		515A4F2315D6F4680011E550 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		515A4F2615D6F4680011E550 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		515A4F2915D6F4690011E550 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
-		515A4F3015D8350F0011E550 /* howling_sideview.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = howling_sideview.jpg; sourceTree = "<group>"; };
-		515A4F3215D835170011E550 /* stalking.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stalking.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +79,6 @@
 		515A4F1615D6F4680011E550 /* aoc1_week4 */ = {
 			isa = PBXGroup;
 			children = (
-				515A4F3215D835170011E550 /* stalking.jpg */,
-				515A4F3015D8350F0011E550 /* howling_sideview.jpg */,
 				515A4F1F15D6F4680011E550 /* AppDelegate.h */,
 				515A4F2015D6F4680011E550 /* AppDelegate.m */,
 				515A4F2215D6F4680011E550 /* ViewController.h */,
@@ -161,8 +155,6 @@
 				515A4F1B15D6F4680011E550 /* InfoPlist.strings in Resources */,
 				515A4F2715D6F4680011E550 /* ViewController_iPhone.xib in Resources */,
 				515A4F2A15D6F4690011E550 /* ViewController_iPad.xib in Resources */,
-				515A4F3115D8350F0011E550 /* howling_sideview.jpg in Resources */,
-				515A4F3315D835170011E550 /* stalking.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +287,7 @@
 				515A4F2F15D6F4690011E550 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -5,6 +5,8 @@
 //  Created by Monica Peters on 8/11/12.
 //  Copyright (c) 2012 Web & Mobile Developer. All rights reserved.
 //
+//  Project Requirements & Rubric:
+//  http://course.online.fullsail.edu/index.cfm?fuseaction=lms.activitiesDiscussion&activityId=798313&deliveryId=1603013
 
 #import "ViewController.h"
 
