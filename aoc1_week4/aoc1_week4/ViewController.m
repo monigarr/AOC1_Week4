@@ -55,7 +55,9 @@
         [self.view addSubview:loginButton];
     }
     
+    //
     //text enduser enters
+    //
     userNameText = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 90.0f, 300.0f, 70.0f)];
     if (userNameText != nil)
     {
