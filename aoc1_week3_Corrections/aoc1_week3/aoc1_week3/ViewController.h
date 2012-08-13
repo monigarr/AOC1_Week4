@@ -10,12 +10,10 @@
 
 @interface ViewController : UIViewController
 
+    //declaring a function or method
     -(int)add:(int)number1 with:(int)number2;
     -(BOOL)compare:(int)number1 with:(int)number2;
     -(NSString*)append:(NSString*)string1 with:(NSString*)string2;
     -(void)displayAlertWithString:(NSString*)string;
-    -(int)sum;
-    -(int)add;
-    -(int)number1;
-    -(int)number2;
+
 @end
