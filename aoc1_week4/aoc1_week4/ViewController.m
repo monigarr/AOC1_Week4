@@ -20,12 +20,31 @@
 
 @implementation ViewController
 
+//make the keyboard go away 
+//when the user is done entering their username
+// tutorial: http://www.youtube.com/watch?v=7-QFzN-p7oU&feature=channel
+// wip not working yet as of aug 24th 2012
+// to do: textinput / tapbackground call to goawaykeyboard
+
+-(IBAction) goAwayKeyboard: (id) sender {
+    //method to make that keyboard go away
+    //keyboard is the first responder
+    //resign will get rid of it
+    [sender resignFirstResponder];
+}
+
+-(IBAction) tapBackground: (id) sender {
+    //tap the background and make that number pad disappear
+    //if keyboard is open for entering username 
+    [userNameText resignFirstResponder];
+}
+
 - (void)viewDidLoad
 {
    
 	self.view.backgroundColor = [UIColor whiteColor];
     
-    //username label on left, black font
+    //username label first on the top left, black font
     userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 20.0f, 90.0f, 30.0f)];
     if (userNameLabel != nil)
     {
@@ -35,7 +54,7 @@
     }
     [self.view addSubview:userNameLabel];
     
-    //username input on right rounded rectangle
+    //username input first on top right rounded rectangle
     userNameInput = [[UITextField alloc] initWithFrame:CGRectMake(100.0f, 10.0f, 200.0f, 30.0f)];
     if (userNameInput != nil)
     {
@@ -44,6 +63,7 @@
     }
     
     //login button on right with blue text font
+    //under the login label and input
     loginButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     if (loginButton != nil)
     {
@@ -55,9 +75,9 @@
         [self.view addSubview:loginButton];
     }
     
-    //
-    //text enduser enters
-    //
+
+    // text enduser enters into username field
+    // at top of screen
     userNameText = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 90.0f, 300.0f, 70.0f)];
     if (userNameText != nil)
     {
@@ -68,7 +88,8 @@
     }
     [self.view addSubview:userNameText];
     
-    //show date button
+    // show date button at center of screen
+    // under the login area
     showDateButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     if (showDateButton != nil) {
         showDateButton.tag = DATE_BUTTON;
@@ -79,7 +100,7 @@
         [self.view addSubview:showDateButton];
     }
     
-    //info button
+    // info button at bottom of screen
     infoButton = [UIButton buttonWithType:UIButtonTypeInfoDark];
     if (infoButton != nil) 
     {
@@ -101,15 +122,19 @@
      [super viewDidLoad];
 }
 
-
+// declare onClick method in header file too
+// in ViewController.h
 -(void)onClick:(UIButton*)button
 {
-    //check tag
+    // check tag. if empty prompt user to enter username
     if (button.tag == LOGIN_BUTTON && userNameInput.text == 0)
     {
+        //show prompt on screen; ask for username to be entered.
         userNameText.text = @"Username cannot be empty.";
         userNameText.textColor = [UIColor orangeColor];
     }
+    //check tag. if username was entered show username on screen
+    //within 3 lines of text, under the username input field & button.
     else if (button.tag == LOGIN_BUTTON)
     {
         NSString *endUser = [[NSString alloc] initWithString:userNameInput.text];
@@ -117,21 +142,36 @@
         userNameText.textColor = [UIColor blueColor];
         userNameText.numberOfLines = 3;
     }
+    // if date button clicked get todays date
     else if (button.tag == DATE_BUTTON)
     {
         NSDate *date = [NSDate date];
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        // if date is not null
         if (dateFormatter != nil)
         {
+            // format the current date view
+            // January 20, 2012 12:00:00:AM
+            // Eastern Daylight Time
             [dateFormatter setDateFormat:@"MMMM d, yyyy h:mm:s:a zzzz"];
             NSString* dateLabel = [dateFormatter stringFromDate:date];
+            // set Date at top of alert popup
+            // set current date on next line in popup
+            // set OK button on next line in popup
             UIAlertView *dateAlertView = [[UIAlertView alloc] initWithTitle:@"Date" message:dateLabel delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            // if current date and alert popup is setup,
+            // show current date in 
+            // alert popup on the screen
             if(dateAlertView != nil)
             {
                 [dateAlertView show];
             }
         }
     }
+    // if info button is clicked
+    // show dev info on screen
+    // at bottom under the info button
+    // in green text within 3 lines
     else if (button.tag == INFO_BUTTON)
     {
         infoLabel.text = @"This application was written by Monica Peters";
