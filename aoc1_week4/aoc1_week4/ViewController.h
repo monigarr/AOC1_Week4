@@ -21,6 +21,5 @@
 
 -(void)onClick:(UIButton*)button;
 -(IBAction) goAwayKeyboard: (id) sender;
--(IBAction) tapBackground: (id) sender;
 
 @end

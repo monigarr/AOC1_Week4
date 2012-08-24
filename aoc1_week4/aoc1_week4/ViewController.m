@@ -33,11 +33,6 @@
     [sender resignFirstResponder];
 }
 
--(IBAction) tapBackground: (id) sender {
-    //tap the background and make that number pad disappear
-    //if keyboard is open for entering username 
-    [userNameText resignFirstResponder];
-}
 
 - (void)viewDidLoad
 {
@@ -60,6 +55,7 @@
     {
         userNameInput.borderStyle = UITextBorderStyleRoundedRect;
         [self.view addSubview:userNameInput];
+        [userNameInput resignFirstResponder];
     }
     
     //login button on right with blue text font
